@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<tr th:each ="item , stat : ${list}">
+    <td> Nurse ------   </td>
+    <td>EmployeeId:</td>
+    <td><span th:text="${item.EmployeeId}"> EmployeeId</span></td>
+    <td>Gender:</td>
+    <td><span th:text="${item.Gender}"> Gender</span></td>
+    <td>Name:</td>
+    <td><span th:text="${item.name}"> Name</span></td>
+    <td>Age:</td>
+    <td><span th:text="${item.Age}"> EmployeeId</span></td>
+    <td>Address:</td>
+    <td><span th:text="${item.Address}"> EmployeeId</span></td>
+    <td>Phone :</td>
+    <td><span th:text="${item.Phone}"> EmployeeId</span></td>
+    <br/>
+    <br/>
+</tr>
+</body>
+</html>

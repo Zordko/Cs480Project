@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<tr th:each ="patients : ${patient}">
+  <td th:text ="${patients.name}">1</td>
+  <td th:text ="${patients.ssn}">1</td>
+  <td th:text ="${patients.race}">1</td>
+  <td th:text ="${patients.occupation}">1</td>
+  <td th:text ="${patients.gender}">1</td>
+  <td th:text ="${patients.medicalHistory}">1</td>
+  <td th:text ="${patients.address}">1</td>
+  <td th:text ="${patients.vaccine}">1</td>
+</tr>
+<form method ="post" th:action ="@{/InfoPatient}">
+  <tr th:each ="item ,stat :${list}">
+    <input type ="radio" name ="chose" id ="Info" th:value = "${stat.index}">
+
+    <td>Time:</td>
+    <td><span th:text="${item.time}"> Time</span></td>
+    <td>Day:</td>
+    <td><span th:text="${item.day}"> Day</span></td>
+    <td>Month:</td>
+    <td><span th:text="${item.month}"> Month</span></td>
+    <br>
+    <br>
+
+  </tr>
+  <input type ="submit" value="Done">
+</form>
+</body>
+</html>

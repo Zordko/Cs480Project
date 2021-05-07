@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Hello Admin what action would you like to take</h1>
+<form method = "post" th:action="@{/adminPage}" >
+    <input type = "radio"  name ="chose" id = "Register" value = "Register" >
+    <label for ="Register">Register a Nurse</label><br>
+    <input type = "radio" name ="chose" id = "Update" value ="Update">
+    <label for ="Update">Update Nurse Info </label><br>
+    <input type = "radio" name ="chose" id = "Delete" value ="Delete">
+    <label for ="Delete">Delete a Nurse</label><br>
+    <input type = "radio" name ="chose" id = "Add" value ="Add">
+    <label for ="Add">Add Vaccine</label><br>
+    <input type = "radio" name ="chose" id = "UpdateV" value ="UpdateV">
+    <label for ="UpdateV">Update Vaccine</label><br>
+    <input type = "radio" name ="chose" id = "ViewN" value ="ViewN">
+    <label for ="ViewN">View Nurses</label><br>
+    <input type = "radio" name ="chose" id = "ViewP" value ="ViewP">
+    <label for ="ViewP">View Patients</label><br>
+
+    <input type="submit" value ="Select" />
+</form>
+</body>
+</html>

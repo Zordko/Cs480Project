@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register a Nurse</title>
+</head>
+<body>
+<h1>Hello busy admin you can add a nurse here.</h1>
+<form  method="post" th:action="@{/RegisterNurse}" th:object="${nurse}">
+  EmployeeID:
+  <input type ="text" th:field  = "*{EmployeeId}"/><br/>
+  Gender: <input type = "text" th:field = *{Gender} /><br/>
+  name: <input type = "text" th:field = *{name} /><br/>
+  age: <input type = "text" th:field = *{age} /><br/>
+  Address: <input type = "text" th:field = *{Address} /><br/>
+  Phone: <input type = "text" th:field = *{Phone} /><br/>
+  <input type="submit" value ="Submit" />
+</form>
+</body>
+</html>

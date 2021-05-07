@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Vaccine Drop</h1>
+<form method = "post" th:action ="@{/Commands}">
+  <label for = "NamevaccineID">Name of Vaccine</label>
+  <input type = "text"  id = "NameVaccineID" name = "NamevaccineID">
+  <label for = "Amount">Amount to DropOff</label>
+  <input type = "text"  id = "Amount" name ="Amount">
+  <input type = "submit" value = "Submit">
+</form>
+<br>
+<br>
+<h1>Time Slot to apply shots</h1>
+<form method ="post" th:action ="@{/TimeSlot}">
+  <tr th:each ="item ,stat :${list}">
+    <input type ="radio" name ="chose" id ="Info" th:value = "${stat.index}">
+
+    <td>Time:</td>
+    <td><span th:text="${item.time}"> Time</span></td>
+    <td>Day:</td>
+    <td><span th:text="${item.day}"> Day</span></td>
+    <td>Month:</td>
+    <td><span th:text="${item.month}"> Month</span></td>
+    <br>
+    <br>
+
+  </tr>
+  <input type ="submit" value="Submit">
+</form>
+
+</body>
+</html>

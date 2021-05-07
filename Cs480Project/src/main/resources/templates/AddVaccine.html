@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Please Provide information about the vaccine you would like to add</h2>
+<form  method="post" th:action="@{/AddVaccine}" th:object="${vaccine}">
+    Name:
+    <input type ="text" th:field  = "*{name}"/><br/>
+    Name of Company: <input type = "text" th:field = *{nameofCom} /><br/>
+    Number of Requested: <input type = "text" th:field = *{numRequested} /><br/>
+    Storage Amount: <input type = "text" th:field = *{storageAmount} /><br/>
+    Reserved Amount: <input type = "text" th:field = *{reservedAmount} /><br/>
+    Texture: <input type = "text" th:field = *{texture} /><br/>
+    <input type="submit" value ="Submit" />
+</form>
+</body>
+</html>

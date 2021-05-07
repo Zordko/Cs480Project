@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Please Provide Id of nurse you would like to delete</h2>
+<form method ="post" th:action="@{/DeleteNurse}">
+  <input type = "text"  name = "input"/>
+  <input type = 'submit' value = "Submit">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Register a Nurse</title>
+</head>
+<body>
+<h1>Hello create a simple patient account.</h1>
+<form  method="post" th:action="@{/createPatient}" th:object="${patient}">
+  Name:
+  <input type ="text" th:field  = "*{name}"/><br/>
+  SSN: <input type = "text" th:field = *{ssn} /><br/>
+  Race: <input type = "text" th:field = *{race} /><br/>
+  Occupation: <input type = "text" th:field = *{occupation} /><br/>
+  Gender: <input type = "text" th:field = *{gender} /><br/>
+  MedicalHistory: <input type = "text" th:field = *{medicalHistory} /><br/>
+  Address: <input type = "text" th:field ="*{address}" /><br/>
+  Vaccine: <input type = "text" th:field ="*{vaccine}" /><br/>
+  Username: <input type ="text" name ="username"/><br/>
+  Password:<input type = "text" name="password"/><br/>
+  <input type="submit" value ="Submit" />
+</form>
+</body>
+</html>

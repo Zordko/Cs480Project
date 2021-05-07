@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form method ="post" th:action ="@{/CancelPatient}">
+  <tr th:each ="item ,stat :${list}">
+    <input type ="radio" name ="chose" id ="Info" th:value = "${stat.index}">
+
+    <td>Time:</td>
+    <td><span th:text="${item.time}"> Time</span></td>
+    <td>Day:</td>
+    <td><span th:text="${item.day}"> Day</span></td>
+    <td>Month:</td>
+    <td><span th:text="${item.month}"> Month</span></td>
+    <br>
+    <br>
+
+  </tr>
+  <input type ="submit" value="Submit">
+</form>
+</body>
+</html>

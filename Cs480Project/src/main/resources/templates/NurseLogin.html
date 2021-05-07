@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Please create a login for this nurse!</h2>
+<form method = "post"  th:action ="@{/NurseLogin}">
+  Username:
+  <input type ="text" name ="username"/><br/>
+  Password: <input type = "text" name ="password" /><br/>
+  <input type="submit" value ="Submit" />
+</form>
+</body>
+</html>

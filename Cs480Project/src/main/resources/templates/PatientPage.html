@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h2>Hello Valued Patient!!!</h2>
+
+<form method = "post" th:action="@{/PatientPage}" >
+
+  <label for = "Id">Enter SSN Please: </label>
+  <input type = "text" name = "id" id ="Id"><br>
+  <input type = "radio"  name ="chose" id = "Update" value = "Update" >
+  <label for ="Update">Update Info</label><br>
+  <input type = "radio" name ="chose" id = "Schedule" value ="Schedule">
+  <label for ="Schedule">Schedule Your Self </label><br>
+  <input type = "radio" name ="chose" id = "Cancel" value ="Cancel">
+  <label for ="Cancel">Cancel a time </label>
+  <input type = "radio" name ="chose" id = "Info" value ="Info">
+  <label for ="Cancel">View your information </label><br>
+
+  <input type="submit" value ="Select" />
+</form>
+</body>
+</html>

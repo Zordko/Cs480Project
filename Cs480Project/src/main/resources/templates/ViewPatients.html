@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<tr th:each ="item , stat : ${list}">
+    <td> Patient ------   </td>
+    <td>Name:</td>
+    <td><span th:text="${item.name}">Name</span></td>
+    <td>SSN:</td>
+    <td><span th:text="${item.ssn}"> SSN</span></td>
+    <td>Race:</td>
+    <td><span th:text="${item.race}"> Race</span></td>
+    <td>Occupation:</td>
+    <td><span th:text="${item.occupation}"> occupation</span></td>
+    <td>Gender:</td>
+    <td><span th:text="${item.gender}"> gender</span></td>
+    <td>MedicalHistory :</td>
+    <td><span th:text="${item.medicalHistory}"> medicalHistory</span></td>
+    <td>Address :</td>
+    <td><span th:text="${item.address}"> address</span></td>
+    <td>Vaccine :</td>
+    <td><span th:text="${item.vaccine }"> Vaccine</span></td>
+    <br/>
+    <br/>
+</tr>
+</body>
+</html>
